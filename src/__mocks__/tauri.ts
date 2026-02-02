@@ -46,7 +46,7 @@ export const mockSettings = {
 
 // Create mock invoke function
 export const createMockInvoke = () => {
-  return vi.fn().mockImplementation((command: string, args?: Record<string, unknown>) => {
+  return vi.fn().mockImplementation((command: string, _args?: Record<string, unknown>) => {
     switch (command) {
       case "get_tracking_status":
         return Promise.resolve(mockTrackingStatus);
