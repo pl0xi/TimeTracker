@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:crates.io)",
+      "WebFetch(domain:docs.rs)",
+      "WebFetch(domain:lib.rs)",
+      "Bash(pnpm init:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm approve-builds:*)",
+      "Bash(pnpm config set:*)",
+      "Bash(pnpm install:*)",
+      "Bash(pnpm tauri init:*)",
+      "Bash(cargo check:*)",
+      "Bash(pnpm dlx tailwindcss:*)",
+      "Bash(pnpm build)",
+      "Bash(pnpm tauri build:*)",
+      "Bash(ls:*)",
+      "Bash(cargo build:*)"
+    ]
+  }
+}
