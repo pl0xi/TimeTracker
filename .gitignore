@@ -31,3 +31,6 @@ src-tauri/Cargo.lock
 
 # TypeScript
 *.tsbuildinfo
+
+# Claude
+.claude/
