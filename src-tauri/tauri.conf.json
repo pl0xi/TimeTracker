@@ -40,6 +40,18 @@
       "icons/128x128@2x.png",
       "icons/icon.icns",
       "icons/icon.ico"
-    ]
+    ],
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDY3QUU4ODAyNUM5QTdDRDMKUldUVGZKcGNBb2l1WnpLeXNsendCQmN1SkVtSDdZdUJNQkRZbkJhSStCT3h3VHBOa0JhSU1odWUK",
+      "endpoints": [
+        "https://github.com/pl0xi/TimeTracker/releases/latest/download/latest.json"
+      ],
+      "windows": {
+        "installMode": "passive"
+      }
+    }
   }
 }

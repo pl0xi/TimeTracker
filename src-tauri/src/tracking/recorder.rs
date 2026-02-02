@@ -100,10 +100,7 @@ impl ActivityRecorder {
         let conn = self.db.conn();
 
         // Try to find existing application by executable path or name
-        let identifier = window
-            .executable_path
-            .as_ref()
-            .unwrap_or(&window.app_name);
+        let identifier = window.executable_path.as_ref().unwrap_or(&window.app_name);
 
         let existing: Option<i64> = conn
             .query_row(

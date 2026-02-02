@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AppLayout } from "./components/layout/AppLayout";
 import { Dashboard } from "./pages/Dashboard";
@@ -5,8 +6,14 @@ import { Reports } from "./pages/Reports";
 import { Categories } from "./pages/Categories";
 import { Projects } from "./pages/Projects";
 import { Settings } from "./pages/Settings";
+import { checkForUpdates } from "./hooks/useUpdater";
 
 function App() {
+  useEffect(() => {
+    // Check for updates on app startup (silent mode - only shows dialog if update available)
+    checkForUpdates(true);
+  }, []);
+
   return (
     <BrowserRouter>
       <Routes>

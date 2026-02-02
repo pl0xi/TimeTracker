@@ -10,15 +10,13 @@ impl WindowDetector {
 
     pub fn get_active_window(&self) -> Option<WindowEvent> {
         match x_win::get_active_window() {
-            Ok(window) => {
-                Some(WindowEvent {
-                    app_name: window.info.name.clone(),
-                    window_title: window.title.clone(),
-                    executable_path: Some(window.info.path.clone()),
-                    process_id: Some(window.info.process_id),
-                    timestamp: Utc::now().timestamp(),
-                })
-            }
+            Ok(window) => Some(WindowEvent {
+                app_name: window.info.name.clone(),
+                window_title: window.title.clone(),
+                executable_path: Some(window.info.path.clone()),
+                process_id: Some(window.info.process_id),
+                timestamp: Utc::now().timestamp(),
+            }),
             Err(e) => {
                 log::warn!("Failed to get active window: {}", e);
                 None
